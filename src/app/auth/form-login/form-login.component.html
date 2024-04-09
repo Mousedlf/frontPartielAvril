@@ -1,5 +1,7 @@
 <div class="container">
-  <h2>Login</h2>
+
+  <h1 class="mb-4">Sign in</h1>
+
 
   <form class="col-md-6" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
     <div class="mb-3">
@@ -11,9 +13,9 @@
       <input type="password" class="form-control" name="password" id="password" ngModel>
     </div>
 
-    <button type="submit" class="btn btn-primary" value="Send">Submit</button>
+    <button type="submit" class="btn btn-primary" value="Send">Login</button>
   </form>
 
-  <p>no account yet? <a href="/register">Register here</a></p>
+  <p class="mt-5">no account yet? <a href="/register">Register here</a></p>
 
 </div>

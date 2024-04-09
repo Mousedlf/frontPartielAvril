@@ -13,7 +13,7 @@ export class LoginService {
 
 
   register(object:any){
-    this.http.post<any>("https://messenger.dlfcaroline.online/register",object).subscribe({
+    this.http.post<any>("http://127.0.0.1:8000/register",object).subscribe({
       next: (response: Response) => {
         console.log(response)
       }
