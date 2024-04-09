@@ -2,6 +2,9 @@ import { Routes } from '@angular/router';
 import {FormLoginComponent} from "./auth/form-login/form-login.component";
 import {HomeComponent} from "./home/home.component";
 import {FormRegisterComponent} from "./auth/form-register/form-register.component";
+import {OrdersComponent} from "./orders/orders.component";
+import {CartComponent} from "./cart/cart.component";
+import {WebcamComponent} from "./webcam/webcam.component";
 
 export const routes: Routes = [
   {
@@ -20,5 +23,17 @@ export const routes: Routes = [
   {
     path:'home',
     component: HomeComponent,
+  },
+  {
+    path:'orders',
+    component: OrdersComponent,
+  },
+  {
+    path:'cart',
+    component: CartComponent,
+  },
+  {
+    path:'webcam',
+    component: WebcamComponent,
   },
 ];

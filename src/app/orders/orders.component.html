@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1 class="text-center mb-4">Your orders</h1>
+
+  <div class="px-2 pt-3" *ngFor="let order of orders ">
+    <div class="card">
+      <p>#{{order.id}}</p>
+      <p>number of items : {{ order.orderItems.length}}</p>
+      <p>total : {{order.total}} €</p>
+      <p>{{ order.createdAt}}</p>
+
+    </div>
+  </div>
+
+</div>
