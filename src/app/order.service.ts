@@ -16,12 +16,10 @@ export class OrderService {
     return this.http.get<Order[]>(Globals.baseUrl+"/"+Globals.id+"/orders");
   }
 
-  matchQrcodeToProduct(name: string){
-    return this.http.get<Product[]>(Globals.baseUrl+"/findby/qrcode/"+name);
-  }
+  saveOrder()
 
-  saveProductToCart(id:any, quantity:number){
-    return this.http.get<Product[]>(Globals.baseUrl+"/cart/add/"+id+"/"+quantity);
-  }
+
+
+
 
 }

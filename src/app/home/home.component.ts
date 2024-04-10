@@ -14,4 +14,8 @@ import {RouterLink} from "@angular/router";
 export class HomeComponent {
 
     protected readonly Globals = Globals;
+
+  // @ts-ignore
+  storedCartItemIds = JSON.parse(sessionStorage.getItem('cartItemIds'));
+
 }

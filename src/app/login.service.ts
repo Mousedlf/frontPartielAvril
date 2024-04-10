@@ -13,7 +13,7 @@ export class LoginService {
 
 
   register(object:any){
-    this.http.post<any>("http://127.0.0.1:8000/register",object).subscribe({
+    this.http.post<any>("https://qrcode.dlfcaroline.online/register",object).subscribe({
       next: (response: Response) => {
         console.log(response)
       }
@@ -35,7 +35,8 @@ export class LoginService {
 
 
   logout(){
-    localStorage.removeItem("Token")
+    localStorage.clear()
+    sessionStorage.clear()
     this.router.navigate(["login"])
   }
 

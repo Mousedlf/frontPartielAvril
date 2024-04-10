@@ -5,6 +5,7 @@ import {FormRegisterComponent} from "./auth/form-register/form-register.componen
 import {OrdersComponent} from "./orders/orders.component";
 import {CartComponent} from "./cart/cart.component";
 import {WebcamComponent} from "./webcam/webcam.component";
+import {PaymentComponent} from "./payment/payment.component";
 
 export const routes: Routes = [
   {
@@ -33,7 +34,11 @@ export const routes: Routes = [
     component: CartComponent,
   },
   {
-    path:'webcam',
+    path:'scanner',
     component: WebcamComponent,
+  },
+  {
+    path:'payment',
+    component: PaymentComponent,
   },
 ];

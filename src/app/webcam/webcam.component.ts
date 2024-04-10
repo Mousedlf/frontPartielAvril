@@ -3,6 +3,7 @@ import {ZXingScannerModule} from "@zxing/ngx-scanner";
 import {NgxScannerQrcodeModule} from "ngx-scanner-qrcode";
 import {AsyncPipe, JsonPipe, NgIf} from "@angular/common";
 import {OrderService} from "../order.service";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'app-webcam',
@@ -19,25 +20,43 @@ import {OrderService} from "../order.service";
 })
 export class WebcamComponent {
 
-  scannedProductId !: string
+  //scannedProductId !: string
   orderService = inject(OrderService);
+  cartService = inject(CartService);
+
 
 
   matchToProduct(value: any){
-    this.scannedProductId = value[0].value
+//  const scannedProductId = value[0].value
 
-    this.orderService.saveProductToCart(this.scannedProductId, 1).subscribe({
-      next: (result) => {
-        console.log(result)
-      }
-    })
+
+    // @ts-ignore
+    const cartItemIds = JSON.parse(sessionStorage.getItem('cartItemIds'));
+
+
+   if(cartItemIds != null){
+
+     const truc = value[0].value
+
+     cartItemIds.push(truc);
+     const ids = cartItemIds
+     console.log(ids)
+
+     sessionStorage.setItem('cartItemIds', JSON.stringify(ids));
+   } else {
+
+ // bricolage, pas regarder de près
+    const scannedId = value[0].value
+     const truc = '['+'"'+scannedId+'"'+']';
+
+     console.log(truc);
+
+    sessionStorage.setItem('cartItemIds', truc);
+
+   }
+
+
   }
-
-  saveProductToCart(id:any){
-
-
-  }
-
 
 
 
