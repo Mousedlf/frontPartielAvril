@@ -20,8 +20,9 @@ export class Animation1Component implements OnInit {
   ngOnInit(): void {
     this.createThreeJsBox();
     setTimeout(()=>{
-      this.router.navigate(['cart'])
+      this.router.navigate(['home'])
     },2000);
+
   }
 
   createThreeJsBox(): void {
