@@ -2,23 +2,25 @@ import {Component, inject} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {ProductService} from "../product.service";
 import {Product} from "../product";
+import {Animation1Component} from "../animation1/animation1.component";
 
 @Component({
   selector: 'app-payment',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    Animation1Component
   ],
   templateUrl: './payment.component.html',
   styleUrl: './payment.component.css'
 })
-export class PaymentComponent {
+export class PaymentComponent  {
 
   productService = inject(ProductService);
   productsInCart: Product[] = []
 
 
-
+ // ROUTE BACK PAS ADAPTEE
   validateOrder() {
     // @ts-ignore
     const storedCartItemIds = JSON.parse(sessionStorage.getItem('cartItemIds'));
@@ -34,7 +36,7 @@ export class PaymentComponent {
         })
       })
 
-      this.productsInCart.forEach()
+     // this.productsInCart.forEach()
 
       console.log(this.productsInCart)
 
@@ -42,6 +44,9 @@ export class PaymentComponent {
     }
 
   }
+
+
+
 
 
 

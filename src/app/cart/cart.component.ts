@@ -86,4 +86,5 @@ export class CartComponent {
      })
    }
 
+  protected readonly sessionStorage = sessionStorage;
 }

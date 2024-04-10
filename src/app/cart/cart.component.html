@@ -31,12 +31,15 @@
     </div>
   </div>
 
-  <div class="mt-4">
-    <button (click)="getTotal()" class="btn"> TOTAL</button>
+  @if(sessionStorage.getItem('cartItemIds') != null){
+    <div class="mt-4">
+      <button (click)="getTotal()" class="btn"> TOTAL</button>
 
-    <button routerLink="/payment" class="btn btn-dark"> Proceed to payment</button>
+      <button routerLink="/payment" class="btn btn-dark"> Proceed to payment</button>
 
-  </div>
+    </div>
+  }
+
 
 
 

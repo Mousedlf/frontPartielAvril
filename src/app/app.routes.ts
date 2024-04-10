@@ -6,6 +6,7 @@ import {OrdersComponent} from "./orders/orders.component";
 import {CartComponent} from "./cart/cart.component";
 import {WebcamComponent} from "./webcam/webcam.component";
 import {PaymentComponent} from "./payment/payment.component";
+import {Animation1Component} from "./animation1/animation1.component";
 
 export const routes: Routes = [
   {
@@ -40,5 +41,9 @@ export const routes: Routes = [
   {
     path:'payment',
     component: PaymentComponent,
+  },
+  {
+    path:'animation',
+    component: Animation1Component,
   },
 ];
